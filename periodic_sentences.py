@@ -49,3 +49,6 @@ str_elements(make_alpha(input("Please input a desired string: ").lower()))
 
 for i in all_element_combos:
     print_elements(i)
+
+if len(all_element_combos) == 0:
+    print("Could not write string using the periodic table.")

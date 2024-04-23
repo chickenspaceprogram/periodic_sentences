@@ -1,1 +1,1 @@
-A program that writes any sentence using elements of the periodic table, if possible.
+A Python program that writes any string using the elements of the periodic table, if possible.
