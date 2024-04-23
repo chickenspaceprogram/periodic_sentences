@@ -1,0 +1,1 @@
+A program that writes any sentence using elements of the periodic table, if possible.
