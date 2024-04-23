@@ -1,8 +1,9 @@
 from elements_set import elements_len1, elements_len2
 import copy
+import argparse
 
-all_element_combos = []
-elements = []
+all_element_combos: list = []
+elements: list = []
 
 def str_elements(str_check: str) -> None:
     '''
@@ -45,10 +46,18 @@ def print_elements(elements: list[str]) -> None:
         print(i, end=' ')
     print()
 
-str_elements(make_alpha(input("Please input a desired string: ").lower()))
+parser: argparse.ArgumentParser = argparse.ArgumentParser(description="Finds every possible way to write a given string using element symbols from the Periodic Table.")
+parser.add_argument('input', type=str, nargs='?',help="the string you'd like to write using element symbols")
+args = parser.parse_args()
+if args.input:
+    user_input: str = args.input
+else:
+    user_input: str = input("Please input a desired string: ")
+
+str_elements(make_alpha(user_input.lower()))
 
 for i in all_element_combos:
     print_elements(i)
 
 if len(all_element_combos) == 0:
-    print("Could not write string using the periodic table.")
+    print("Could not write string using element symbols.")

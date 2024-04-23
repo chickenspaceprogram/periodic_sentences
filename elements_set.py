@@ -118,6 +118,7 @@ elements = {
     'Ts',
     'Og',
 }
+# there's got to be a better way to do this, this took quite a while to do by hand
 
 elements_len1 = {i for i in elements if len(i) == 1}
 elements_len2 = {i for i in elements if len(i) == 2}
