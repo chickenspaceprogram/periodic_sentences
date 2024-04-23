@@ -27,5 +27,5 @@ def str_elements(str_check: str) -> None:
                 str_elements(str_check[2:])
             elements.pop()
 
-str_elements('')
+str_elements('math')
 print(all_element_combos)
